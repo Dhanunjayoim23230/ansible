@@ -3,7 +3,7 @@
   connection: local
   vars:
     course: "devops with aws"
-    duraiton: 120 hours
+    duration: 120 hours
     trainer: sivakumar m
   tasks: 
   - name: print task level variables
