@@ -15,4 +15,4 @@
   tasks:
   - name: print variables from prompt
     ansible.builtin.debug:
-      msg: "course is {{course}}, duration is{{duration}}, trainer is {{trainser}}"
+      msg: "course is {{course}}, duration is{{duration}}, trainer is {{trainer}}"
