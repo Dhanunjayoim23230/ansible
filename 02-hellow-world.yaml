@@ -1,0 +1,6 @@
+- name: hellow world
+  hosts: web
+  tasks:
+    -name: print hellow world
+    ansible.builtin.debug:
+    msg: "hellow world"
