@@ -6,12 +6,12 @@
     duraiton: 120 hours
     trainer: sivakumar m
   tasks: 
-    - name: print task level variables
-      vars:
-        course: ansible
-      ansible.builtin.debug:
-        msg: "course is {{course}}, duration is {{duration}}, traner is {{trainer}}"
+  - name: print task level variables
+    vars:
+      course: ansible
+    ansible.builtin.debug:
+      msg: "course is {{course}}, duration is {{duration}}, traner is {{trainer}}"
 
-      - name: print play level variables
-      ansilbe.builtin.debug:
-        msg: "course is {{course}}, duration is {{duration}}, trainer is {{trainer}}"
+  - name: print play level variables
+    ansilbe.builtin.debug:
+      msg: "course is {{course}}, duration is {{duration}}, trainer is {{trainer}}"
