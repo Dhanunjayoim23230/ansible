@@ -13,5 +13,5 @@
       msg: "course is {{course}}, duration is {{duration}}, traner is {{trainer}}"
 
   - name: print play level variables
-    ansilbe.builtin.debug:
+    ansible.builtin.debug:
       msg: "course is {{course}}, duration is {{duration}}, trainer is {{trainer}}"
