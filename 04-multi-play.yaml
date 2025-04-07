@@ -4,7 +4,7 @@
   tasks: 
     - name: play 1 and task 1
       ansible.builtin.debug:
-      msg: "hellow from play 1 and task 1"
+        msg: "hellow from play 1 and task 1"
 
 - name: PLAY 2
   hosts: web
@@ -12,5 +12,5 @@
   tasks:
     - name: play 2 and task 1
       ansible.builtin.debug:
-      msg: "hellow from play 2 and taks 1"
+        msg: "hellow from play 2 and taks 1"
       
