@@ -7,5 +7,8 @@
       ansible.builtin.shell: ls -lrth > /tmp/output.txt
 
     - name: execute ls command in command module
-      ansible.builtin.command: ls -ltr > /tmp/output.txt
+      #ansible.builtin.command: ls -ltr > /tmp/output.txt  # it is having limited access so can not access in /tmp inside server
+      ansible.builtin.command: ls -lrth
+      
+
 
