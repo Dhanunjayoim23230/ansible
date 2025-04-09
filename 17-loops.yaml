@@ -1,12 +1,13 @@
 - name: install nginx
-  hosts: local
+  hosts: web
+  connection: local
   connection: local
   tasks:
     - name: install nginx
       ansible.builtin.package:
       name: " install {{ item.name }}"
-      state: " installed "{{ item.state}}""
+      state:  "{{ item.state}}"
       loop:
-        - name: "gcc" state: "presnet"
+        - name: "gcc" state: "present"
         - name: "nginx" state: "absent"
         - name: "zip" state: " present"
