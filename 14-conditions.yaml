@@ -3,7 +3,7 @@
   connection: local
   tasks:
     - name: install nginx in RHEL
-      ansilbe.builtin.dnf:
+      ansible.builtin.dnf:
         name: nginx
         state: installed
         msg: "nginx installed in RHEL"
