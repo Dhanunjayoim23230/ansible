@@ -10,12 +10,12 @@
   tasks:
     - name: check number is greater than
       ansible.builtin.debug:
-        convert: " {{ y | int }}"
-        msg: " given {{x}} is grater than {{y}} "
-      when: x > y
+        Z: " {{ y | int }}"
+        msg: " given {{x}} is grater than {{Z}} "
+      when: x > Z
 
     - name: check number is less than
       ansible.builtin.debug:
-        convert: " {{ y | int }}"
-        msg: " given {{x}} is less than {{y}}"
-      when : x < y
+        Z: " {{ y | int }}"
+        msg: " given {{x}} is less than {{Z}}"
+      when : x < Z
