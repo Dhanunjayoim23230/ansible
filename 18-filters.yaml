@@ -1,0 +1,53 @@
+- name: filters
+  hosts: local
+  connection: local
+  tasks:
+    - name: manage undefine variable
+      ansible.builtin.debug:
+        msg: "hellow {{ person | default('Ramesh')}}"
+
+    - name: convert string to list
+      vars:
+        x: 'banana', 'pappaya','howareyou'
+      ansible.builtin.debug:
+        msg: " string to list {{ x | split(',')}}"
+    
+    
+    - name: conver upper case
+      vars:
+        Person: "how are you"
+      ansible.builtin.debug:
+        msg: " convert into upper case {{ person| upper }}"
+
+    - name: conver lower case
+      vars:
+        person: "HI VRUSHALI"
+      ansible.builtin.debug:
+        msg: " convert into lower case {{ person | lower }}"
+
+    - name: convert map to list
+      vars:
+        map:
+          fruit: apple
+          leaf: tamarind
+      ansible.builtin.debug:
+        msg: " {{ map | ('dict2items') }}"
+
+    - name: convert list to map
+      vars:
+        list:
+          - banana
+          - tamarind
+          - trees
+          - tower
+      ansible.builtin.debug:
+        msg: " list | ('items2dict')"
+
+    - name: min and max numbers
+      vars:
+        number: '2,3,4,5,6,7,8'
+      ansible.builtin.debug:
+        msg: " print min number {{ number| min }}, max number {{ number | max }}"
+
+
+        

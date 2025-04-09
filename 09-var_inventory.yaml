@@ -1,0 +1,7 @@
+- name: variables from inventory
+  hosts: local
+  connection: local # ssh dont need username password
+  tasks:
+    - name: variables from inventory
+      ansible.builtin.debug:
+        msg: " course is {{ course }}, duration is {{ duration }}, trainer is {{ trainer }}"

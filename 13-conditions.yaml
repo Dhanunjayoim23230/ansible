@@ -1,0 +1,19 @@
+- name: given number is less than or greater than
+  hosts: local
+  connection: local
+  vars:
+    x: 10
+  vars_prompt:
+    - name: y
+      promt: enter the number y
+      private: false
+  tasks:
+    - name: check number is greater than
+      ansible.builtin.debug:
+        msg: " given {{x}} is grater than {{y}} "
+      when: x > y
+
+    - name: check number is less than
+      ansilbe.builtin.debug:
+        msg: " given {{x}} is less than {{y}}"
+      when : x < y
