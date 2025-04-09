@@ -41,7 +41,7 @@
         - trees
         - tower
     ansible.builtin.debug:
-      msg: " {{list | items2dict }}"
+      msg: " {{ list | items2dict }}"
 
   - name: min and max numbers
     vars:
