@@ -36,10 +36,10 @@
   - name: convert list to map
     vars:
       list:
-        - banana
-        - tamarind
-        - trees
-        - tower
+        - {'key': 'fruit', 'value':'banana'}
+        - {'key': 'teste', 'value':'tamarind'}
+        - {'key': 'tree', 'value': 'trees'}
+        - {'key': 'construct','value':'tower'}
     ansible.builtin.debug:
       msg: " {{ list | items2dict }}"
 
