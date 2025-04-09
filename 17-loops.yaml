@@ -5,9 +5,9 @@
   tasks:
     - name: install nginx
       ansible.builtin.package:
-      name: "{{ item.name }}"
-      state:  "{{ item.state }}"
+        name: "{{ item.name }}"
+        state:  "{{ item.state }}"
     loop:
-    - {name: 'gcc', state: 'present'}
-    - {name: 'nginx', state: 'absent'}
-    - {name: 'zip', state: 'present'}
+      - { name: 'gcc', state: 'present'}
+      - { name: 'nginx', state: 'absent'}
+      - { name: 'zip', state: 'present'}
