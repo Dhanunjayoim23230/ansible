@@ -5,7 +5,7 @@
     x: 10
   vars_prompt:
     - name: y
-      promt: enter the number y
+      prompt: enter the number y
       private: false
   tasks:
     - name: check number is greater than
