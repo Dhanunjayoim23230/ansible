@@ -2,20 +2,19 @@
   hosts: web
   connection: local
   tasks:
-    - name: execute ls command in shell module
-      #ansible.builtin.command: ls -lrth > /tmp/output.txt
-      ansible.builtin.shell: ls -lrth > /tmp/output.txt
+  - name: execute ls command in shell module
+    #ansible.builtin.command: ls -lrth > /tmp/output.txt
+    ansible.builtin.shell: ls -lrth > /tmp/output.txt
 
-    - name: execute ls command in command module
-      #ansible.builtin.command: ls -ltr > /tmp/output.txt  # it is having limited access so can not access in /tmp inside server
-      #ansible.builtin.command: ls -lrth  # it will execute successfully because it only running cmd from outside of the server
-      ansible.builtin.command: lssss -lrtff
-      register: command_result
+  - name: execute ls command in command module
+    #ansible.builtin.command: ls -ltr > /tmp/output.txt  # it is having limited access so can not access in /tmp inside server
+    #ansible.builtin.command: ls -lrth  # it will execute successfully because it only running cmd from outside of the server
+    ansible.builtin.command: lssss -lrtff
+    register: command_result
 
-
-    - name: print the output
-      ansible.builtin.debug:
-        msg: "{{ command_result }}"
+  - name: print the output
+    ansible.builtin.debug:
+      msg: "{{ command_result }}"
 
 
 
