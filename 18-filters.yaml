@@ -17,7 +17,7 @@
     vars:
       Person: "how are you"
     ansible.builtin.debug:
-      msg: " convert into upper case {{ person| upper }}"
+      msg: " convert into upper case {{ Person | upper }}"
 
   - name: conver lower case
     vars:
