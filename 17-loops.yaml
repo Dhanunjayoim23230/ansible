@@ -1,11 +1,11 @@
 - name: install nginx
   hosts: web
   connection: local
-  connection: local
+  become: yes
   tasks:
     - name: install nginx
       ansible.builtin.package:
-      name: " install {{ item.name }}"
+      name: "{{ item.name }}"
       state:  "{{ item.state}}"
       loop:
         - {name: "gcc" , state: "present"}
