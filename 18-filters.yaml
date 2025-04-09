@@ -50,4 +50,8 @@
         msg: " print min number {{ number| min }}, max number {{ number | max }}"
 
 
-        
+    - name: validate ip address
+      vars:
+        ip: 10.94.115.208
+      ansible.builtin.debug:
+        msg: " ip address {{ ip | ansible.utils.ipaddr }}"
