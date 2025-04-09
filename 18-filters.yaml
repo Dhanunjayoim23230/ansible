@@ -8,9 +8,9 @@
 
   - name: convert string to list
     vars:
-      x: 'banana', 'pappaya','howareyou'
+      x: "banana, pappaya, howareyou"
     ansible.builtin.debug:
-      msg: " string to list {{ x | split(',')}}"
+      msg: " string to list {{ x | split(',') }}"
   
   
   - name: convert upper case
