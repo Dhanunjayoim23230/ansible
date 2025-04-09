@@ -13,9 +13,9 @@
     live: true #boolean
     tools: #map
       cloud: AWS
-      cm: ansilbe
+      cm: ansible
 
   tasks:
     - name: print all data types
       ansible.builtin.debug:
-        msg: " course is {{course}}, duration is {{duration}}, contents are {{contents}}, is it live{{live}},tools include {{tools}}"
+        msg: " course is {{course}}, duration is {{duration}}, contents are {{content}}, is it live{{live}},tools include {{tools}}"
