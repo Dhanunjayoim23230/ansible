@@ -31,7 +31,7 @@
         fruit: apple
         leaf: tamarind
     ansible.builtin.debug:
-      msg: " {{ map | ('dict2items') }}"
+      msg: " {{ map | dict2items }}"
 
   - name: convert list to map
     vars:
@@ -41,7 +41,7 @@
         - trees
         - tower
     ansible.builtin.debug:
-      msg: " list | ('items2dict')"
+      msg: " {{list | items2dict }}"
 
   - name: min and max numbers
     vars:
