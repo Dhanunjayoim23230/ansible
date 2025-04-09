@@ -12,10 +12,10 @@
       ansible.builtin.debug:
         #Z: " {{ y | int }}"
         msg: " given {{x}} is grater than {{y}} "
-      when: x > int==y
+      when: int==y | > x
 
     - name: check number is less than
       ansible.builtin.debug:
         #Z: " {{ y | int }}"
         msg: " given {{x}} is less than {{y}}"
-      when : x < int==y
+      when : int==y | < x
