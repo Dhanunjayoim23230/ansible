@@ -8,6 +8,6 @@
       name: " install {{ item.name }}"
       state:  "{{ item.state}}"
       loop:
-        - {name: "gcc" state: "present"}
-        - {name: "nginx" state: "absent"}
-        - {name: "zip" state: " present"}
+        - {name: "gcc" , state: "present"}
+        - {name: "nginx", state: "absent"}
+        - {name: "zip" ,state: " present"}
