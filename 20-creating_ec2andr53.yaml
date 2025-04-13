@@ -7,7 +7,7 @@
       ansible.builtin.pip:
         name: "{{ item }}"
         state: installed
-      executable: pip3.9
+        executable: pip3.9
       loop:
       - botocore
       - boto3
