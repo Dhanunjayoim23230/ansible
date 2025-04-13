@@ -5,7 +5,7 @@
   tasks:
     - name: install python libraries
       ansible.builtin.package:
-        name: {{ item }}
+        name: "{{ item }}"
         state: installed
       loop:
       - botocore
