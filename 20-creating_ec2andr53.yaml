@@ -24,7 +24,7 @@
   - name: creating ec2 instances
     amazon.aws.ec2_instance:
       name: "{{ item }}"
-      region: us-east-1
+      # region: us-east-1
       subnet_id: "{{ subnet_id }}"
       security_group: "{{ sg_id }}"
       image_id: "{{ image_id }}"
