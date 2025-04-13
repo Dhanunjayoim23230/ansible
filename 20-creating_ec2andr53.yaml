@@ -1,5 +1,5 @@
-- name: crreatin ec2 instance
-  hosts: local
+- name: creating ec2 instance
+  hosts: web
   connection: local
   become: yes
   tasks:
