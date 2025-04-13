@@ -1,14 +1,13 @@
 - name: creating ec2 instance
   hosts: local
   connection: local
-  become: yes
   vars:
     subnet_id: subnet-06b401e93006806d8
     image_id: ami-09c813fb71547fc4f
     instance_type: t3.micro
     sg_id: sg-000e29e59ac2e3185 
     zone: dawsclous.tech
-    instance:
+    instances:
     - mysql
     - backend
     - frontend
@@ -27,8 +26,8 @@
       name: "{{ item }}"
       region: us-east-1
       subnet_id: "{{ subnet_id }}"
-      instance_type: "{{ instance_type }}"
-      image_id: "{{ image_id }}"
       security_group: "{{ sg_id }}"
-    loop: "{{ instance }}"
+      image_id: "{{ image_id }}"
+      instance_type: "{{ instance_type }}"
+    loop: "{{ instances }}"
   
