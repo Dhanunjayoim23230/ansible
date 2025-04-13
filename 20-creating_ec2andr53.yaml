@@ -8,9 +8,7 @@
     instance_type: t3.micro
     sg_id: sg-000e29e59ac2e3185 
     instance:
-      - mysql
-      - frontend
-      - backend
+      
   tasks:
   - name: install python libraries
     ansible.builtin.pip:
@@ -30,5 +28,5 @@
       security_group: "{{ sg_id }}"
       # termination_protection: true
       # wait: true
-      loop: "{{ instance }}"
+    loop: "{{ instance }}"
   
