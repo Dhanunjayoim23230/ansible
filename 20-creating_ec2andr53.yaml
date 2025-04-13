@@ -30,5 +30,5 @@
       security_group: "{{ sg_id }}"
       # termination_protection: true
       # wait: true
-      loop: "{{ instances }}"
+      loop: "{{ instance }}"
   
