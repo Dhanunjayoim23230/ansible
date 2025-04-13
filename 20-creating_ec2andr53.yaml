@@ -7,26 +7,28 @@
     image_id: ami-09c813fb71547fc4f
     instance_type: t3.micro
     sg_id: sg-000e29e59ac2e3185 
+    instance:
+    - mysql
+    - frontend
+    - backend
   tasks:
-    - name: install python libraries
-      ansible.builtin.pip:
-        name: "{{ item }}"
-        state: present
-        executable: pip3.9
-      loop:
-      - botocore
-      - boto3
+  - name: install python libraries
+    ansible.builtin.pip:
+      name: "{{ item }}"
+      state: present
+      executable: pip3.9
+    loop:
+    - botocore
+    - boto3
 
-    - name: creating ec2 instances
-      amazon.aws.ec2_instance:
-        name: "{{ item }}"
-        subnet_id: "{{ subnet_id }}"
-        instance_type: "{{ instance_type }}"
-        image_id: "{{ image_id }}"
-        security_group: "{{ sg_id }}"
-        # termination_protection: true
-        # wait: true
-      loop:
-      - mysql
-      - frontend
-      - backend
+  - name: creating ec2 instances
+    amazon.aws.ec2_instance:
+      name: "{{ item }}"
+      subnet_id: "{{ subnet_id }}"
+      instance_type: "{{ instance_type }}"
+      image_id: "{{ image_id }}"
+      security_group: "{{ sg_id }}"
+      # termination_protection: true
+      # wait: true
+      loop: "{{ item.instances }}"
+  
