@@ -5,12 +5,12 @@
   tasks:
     - name: install python libraries
       ansible.builtin.package:
-        name: {{item}}
+        name: {{ item }}
         state: installed
       loop:
       - botocore
       - boto3
-      
+
     - name: creating ec2 instances
       amazon.aws.ec2_instance:
         name: "{{ item }}"
