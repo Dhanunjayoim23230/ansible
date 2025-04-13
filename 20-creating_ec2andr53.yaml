@@ -3,16 +3,16 @@
   connection: local
   become: yes
   tasks:
-- name: creating ec2 instances
-  amazon.aws.ec2_instance:
-    name: "{{ item }}"
-    # vpc_subnet_id: subnet-5ca1ab1e
-    instance_type: t3.micro
-    image_id: ami-09c813fb71547fc4f
-    security_group: default
-    # termination_protection: true
-    # wait: true
-  loop:
-  - mysql
-  - frontend
-  - backend
+    - name: creating ec2 instances
+      amazon.aws.ec2_instance:
+        name: "{{ item }}"
+        # vpc_subnet_id: subnet-5ca1ab1e
+        instance_type: t3.micro
+        image_id: ami-09c813fb71547fc4f
+        security_group: default
+        # termination_protection: true
+        # wait: true
+      loop:
+      - mysql
+      - frontend
+      - backend
