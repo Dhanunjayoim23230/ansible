@@ -1,5 +1,5 @@
 - name: nginx installation using dynamic inventory
-  hosts: nginx
+  hosts: all
   become: yes
   tasks:
     - name: install nginx
