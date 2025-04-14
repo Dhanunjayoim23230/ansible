@@ -1,8 +1,14 @@
 - name: nginx installation using dynamic inventory
   hosts: all
   become: yes
+  serial: 10 # this will execute 1 time for 10 forks
   tasks:
     - name: install nginx
       ansible.builtin.package:
        name: nginx
        state: installed
+
+    - name: run nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
